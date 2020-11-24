@@ -26,6 +26,16 @@ int main(int argc, char** argv){
 
 	pthread_create(&USR_GME,NULL,&STRT,NULL);
 #else
+	// Calls the entry point of the game
+	u_int8_t res_err=START(argc, argv);
+
+	/*	Once the game finishes, the game will return some sort of value back to the game engine. This value will be a 16-bit unsigned integer.
+	 *	This will tell AlsGM how to deal with a specific error. Instead of the game developer have to deal with game-breaking post error-handling
+	 * */
+	switch(res_err){
+		case R_SUCSESS:
+			break;
+	}
 #endif 
 
 	return 0;

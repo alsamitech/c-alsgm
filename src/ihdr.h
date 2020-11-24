@@ -1,6 +1,9 @@
 #ifndef ALSGM_IHDR_H
 #define ALSGM_IHDR_H
 
+#include "def.h"
+#include "gmtypes.h"
+
 // links to extern object files for whatever processor architecture is defined in config.h
 #ifdef AMD_64
 
@@ -29,4 +32,4 @@
 
 
 
-#endif
+#endif	// ALSGM_IHDR_H
